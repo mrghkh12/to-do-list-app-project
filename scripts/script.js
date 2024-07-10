@@ -21,7 +21,7 @@ function addTask(){
         taskElem.appendChild(delTaskElem)
         listContainer.appendChild(taskElem)
     }
-
+    saveTask()
     inputBox.value = ''
 }
 
@@ -32,4 +32,13 @@ listContainer.addEventListener('click' , e =>{
     else if (e.target.tagName == "SPAN"){
         e.target.parentElement.remove()
     }
+    saveTask()
 })
+
+function saveTask(){
+    localStorage.setItem('taskList' , listContainer.innerHTML)
+}
+function loadTask(){
+    listContainer.innerHTML = localStorage.getItem("taskList")
+}
+window.addEventListener('load' , loadTask)
