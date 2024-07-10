@@ -8,6 +8,17 @@ inputBox.addEventListener( 'keydown' , e => {
 })
 addTaskBtn.addEventListener( 'click' , addTask)
 
+const listContainer = $.querySelector('.list-container')
+
 function addTask(){
-    console.log(inputBox.value);
+    if(inputBox.value.trim() == ''){
+        alert('you must write something!')
+    }else{
+        let taskElem = $.createElement('li')
+        taskElem.innerHTML = inputBox.value
+
+        listContainer.appendChild(taskElem)
+    }
+
+    inputBox.value = ''
 }
