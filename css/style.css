@@ -89,3 +89,20 @@
 .todo-app .list-container li.checked::before{
     background-image: url(../images/checked.png);
 }
+
+.todo-app .list-container li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+.todo-app .list-container li span:hover{
+    background: #edeef0;
+}

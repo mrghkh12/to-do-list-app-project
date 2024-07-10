@@ -16,7 +16,9 @@ function addTask(){
     }else{
         let taskElem = $.createElement('li')
         taskElem.innerHTML = inputBox.value
-
+        let delTaskElem = $.createElement('span')
+        delTaskElem.innerHTML = '\u00d7'
+        taskElem.appendChild(delTaskElem)
         listContainer.appendChild(taskElem)
     }
 
