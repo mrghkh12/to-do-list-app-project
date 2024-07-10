@@ -61,3 +61,31 @@
 .todo-app .add-todo-section button:hover{
     background: #dd5344;
 }
+
+.todo-app .list-container li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 45px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+.todo-app .list-container li::before{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-image: url(../images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+}
+.todo-app .list-container li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+.todo-app .list-container li.checked::before{
+    background-image: url(../images/checked.png);
+}
