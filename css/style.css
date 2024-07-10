@@ -29,3 +29,35 @@
     width: 30px;
     margin-left: 10px;
 }
+
+.todo-app .add-todo-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+.todo-app .add-todo-section input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 16px;
+}
+.todo-app .add-todo-section button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    transition: 0.5s;
+    color: #fff;
+    font-size:  16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+.todo-app .add-todo-section button:hover{
+    background: #dd5344;
+}
